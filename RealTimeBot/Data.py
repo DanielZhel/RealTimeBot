@@ -21,7 +21,7 @@ def get_instrument_data (instId, bar, limit):
     
     hist.reverse()
     inst_data= pd.DataFrame(hist)
-    
+    print("dd")
     return inst_data
 
 

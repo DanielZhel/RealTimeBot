@@ -2,9 +2,13 @@ import asyncio
 import sys
 
 SCRIPTS = [
-    'RealTimeBot.py',
-    'RealTime2.py',
-    'XRP.py'
+    'SOL.py',
+    'ADA.py',
+    'XRP.py',
+    'FIL.py',
+    'MATIC.py',
+    'DOT.py',
+    'UNI.py'
 ]
 
 async def waiter(sc, p):

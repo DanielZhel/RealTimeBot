@@ -1,5 +1,4 @@
-from gettext import npgettext
-from turtle import width
+
 from dash import Dash, dcc, html, Input, Output
 import dash_bootstrap_components as dbc
 import plotly.express as px
@@ -29,8 +28,8 @@ app.layout = html.Div([
 
 def update_figure(n_intervals):
     
-    inst_data1= dt.get_instrument_data("XRP-USDT", "1H", 100)
-    inst_data2= dt.get_instrument_data("XRP-USDT", "15m", 300)
+    inst_data1= dt.get_instrument_data("UNI-USDT", "1H", 100)
+    inst_data2= dt.get_instrument_data("UNI-USDT", "15m", 300)
     
     
     macd_values = i.get_macd_values(inst_data1)
@@ -43,20 +42,18 @@ def update_figure(n_intervals):
     macdsignal_trace = go.Scatter(y = macd_values[0][1], x = inst_data1['time'], line=dict(color='orange', width=1))
     hist_trace = go.Bar(x = inst_data1['time'], y = macd_values[0][2])
 
- 
+
     stochfast_trace = go.Scatter(y= stoch_values[0], x=inst_data2['time'],line=dict(color='dodgerblue', width=1))
     stochslow_trace = go.Scatter(y= stoch_values[1], x=inst_data2['time'], line=dict(color='orange', width=1))
 
+
     ema_trace = go.Scatter(x=inst_data1['time'], y=ema_values[0])
 
-
     fig.add_trace(ema_trace, row =1, col =1)
-
 
     fig.add_trace(hist_trace, row=2, col=1)
     fig.add_trace(macd_trace, row=2, col=1)
     fig.add_trace(macdsignal_trace, row=2, col=1)
-
 
     fig.add_trace(stochslow_trace, row=2, col=2)
     fig.add_trace(stochfast_trace, row=2, col=2)
@@ -103,6 +100,8 @@ def update_figure(n_intervals):
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8052)
+    app.run_server(debug=True,port=8051)
+
+
 
 

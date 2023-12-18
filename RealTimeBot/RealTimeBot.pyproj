@@ -22,16 +22,20 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ADA.py" />
     <Compile Include="Data.py" />
+    <Compile Include="DOT.py" />
+    <Compile Include="FIL.py" />
     <Compile Include="Indicators.py" />
+    <Compile Include="MATIC.py" />
     <Compile Include="OKXAPI\client.py" />
     <Compile Include="OKXAPI\consts.py" />
     <Compile Include="OKXAPI\MarketData.py" />
-    <Compile Include="RealTime2.py" />
+    <Compile Include="UNI.py" />
     <Compile Include="ReduceRepeat.py" />
     <Compile Include="OKXAPI\utils.py" />
     <Compile Include="PositionImit.py" />
-    <Compile Include="RealTimeBot.py" />
+    <Compile Include="SOL.py" />
     <Compile Include="start.py" />
     <Compile Include="ThreeScreenTradingLogic.py" />
     <Compile Include="TradingLogic.py" />
