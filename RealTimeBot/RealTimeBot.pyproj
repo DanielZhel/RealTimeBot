@@ -1,0 +1,61 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>8b3de0fe-293f-48aa-85f6-e30282496492</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>start.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>RealTimeBot</Name>
+    <RootNamespace>RealTimeBot</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Data.py" />
+    <Compile Include="Indicators.py" />
+    <Compile Include="OKXAPI\client.py" />
+    <Compile Include="OKXAPI\consts.py" />
+    <Compile Include="OKXAPI\MarketData.py" />
+    <Compile Include="RealTime2.py" />
+    <Compile Include="ReduceRepeat.py" />
+    <Compile Include="OKXAPI\utils.py" />
+    <Compile Include="PositionImit.py" />
+    <Compile Include="RealTimeBot.py" />
+    <Compile Include="start.py" />
+    <Compile Include="ThreeScreenTradingLogic.py" />
+    <Compile Include="TradingLogic.py" />
+    <Compile Include="SendMessage.py" />
+    <Compile Include="XRP.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OKXAPI\" />
+    <Folder Include="OKXAPI\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OKXAPI\exceptions.pyc" />
+    <Content Include="OKXAPI\__pycache__\client.cpython-39.pyc" />
+    <Content Include="OKXAPI\__pycache__\consts.cpython-39.pyc" />
+    <Content Include="OKXAPI\__pycache__\MarketData.cpython-39.pyc" />
+    <Content Include="OKXAPI\__pycache__\utils.cpython-39.pyc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
