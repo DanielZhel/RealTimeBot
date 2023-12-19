@@ -1,8 +1,12 @@
 import datetime
+
+import httpx
 from OKXAPI.MarketData import MarketAPI
 import pandas as pd
 
 def get_instrument_data (instId, bar, limit):
+    timeout = httpx.Timeout(10.0, read=None)
+    response = httpx.get(url="https://www.okx.com", verify=False, timeout=timeout)
     market_data = MarketAPI(flag="0", domain="https://www.okx.com", debug = True)
     cs = market_data.get_candlesticks(instId= instId,bar=bar, limit=limit)
     hist= []

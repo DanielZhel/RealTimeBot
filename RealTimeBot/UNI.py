@@ -16,7 +16,7 @@ app.layout = html.Div([
     dcc.Graph(id="fig"),
     
     
-    dcc.Interval(id="interval", interval =2000)
+    dcc.Interval(id="interval", interval =20000)
 
     ])
 
@@ -28,8 +28,8 @@ app.layout = html.Div([
 
 def update_figure(n_intervals):
     
-    inst_data1= dt.get_instrument_data("UNI-USDT", "1H", 100)
-    inst_data2= dt.get_instrument_data("UNI-USDT", "15m", 300)
+    inst_data1= dt.get_instrument_data("UNI-USDT", "30m", 100)
+    inst_data2= dt.get_instrument_data("UNI-USDT", "5m", 300)
     
     
     macd_values = i.get_macd_values(inst_data1)
@@ -94,13 +94,13 @@ def update_figure(n_intervals):
                 )
             ), height=700
         )
-    tl.get_short_entry(macd_values,ema_values,stoch_values,inst_data2, fig, go)
-    tl.get_long_entry(macd_values,ema_values,stoch_values,inst_data2, fig, go)
+    tl.get_short_entry(macd_values,ema_values,stoch_values,inst_data2, fig, go, "UNI SHORT")
+    tl.get_long_entry(macd_values,ema_values,stoch_values,inst_data2, fig, go, "UNI LONG")
     
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug=True,port=8051)
+    app.run_server(debug=True,port=8055)
 
 
 

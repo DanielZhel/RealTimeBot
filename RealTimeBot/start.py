@@ -1,6 +1,11 @@
 import asyncio
 import sys
 
+import httpx
+
+
+
+
 SCRIPTS = [
     'SOL.py',
     'ADA.py',
@@ -19,13 +24,13 @@ async def waiter(sc, p):
 async def main():
     waiters  = []
     
-    # Запуск
+    
     for sc in SCRIPTS:
         p = await asyncio.create_subprocess_exec(sys.executable, sc)
         print('Started', sc)
         waiters.append(asyncio.create_task(waiter(sc, p)))
 
-    # Ожидание
+   
     while waiters:
         done, waiters = await asyncio.wait(waiters, return_when=asyncio.FIRST_COMPLETED)
         for w in done:

@@ -37,7 +37,6 @@
     <Compile Include="PositionImit.py" />
     <Compile Include="SOL.py" />
     <Compile Include="start.py" />
-    <Compile Include="ThreeScreenTradingLogic.py" />
     <Compile Include="TradingLogic.py" />
     <Compile Include="SendMessage.py" />
     <Compile Include="XRP.py" />
@@ -52,6 +51,8 @@
     <Content Include="OKXAPI\__pycache__\consts.cpython-39.pyc" />
     <Content Include="OKXAPI\__pycache__\MarketData.cpython-39.pyc" />
     <Content Include="OKXAPI\__pycache__\utils.cpython-39.pyc" />
+    <Content Include="LongStat.txt" />
+    <Content Include="ShortStat.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
