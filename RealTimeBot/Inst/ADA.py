@@ -28,9 +28,9 @@ app.layout = html.Div([
         )
 
 def update_figure(n_intervals):
-    
-    inst_data1= dt.get_instrument_data("FIL-USDT", "30m", 100)
-    inst_data2= dt.get_instrument_data("FIL-USDT", "5m", 300)
+    inst_id= "ADA-USDT"
+    inst_data1= dt.get_instrument_data(inst_id, "30m", 100)
+    inst_data2= dt.get_instrument_data(inst_id, "5m", 300)
     
     
     macd_values = i.get_macd_values(inst_data1)
@@ -38,6 +38,7 @@ def update_figure(n_intervals):
     ema_values=i.get_ema_values(inst_data1, 26)
     
     fig = make_subplots(rows=2,cols=2, shared_xaxes=True,  vertical_spacing=0.01, row_heights=[0.8, 0.2])
+    fig.update_layout(title=inst_id)
     
     macd_trace = go.Scatter(y = macd_values[0][0], x = inst_data1['time'], line=dict(color='dodgerblue', width=1))
     macdsignal_trace = go.Scatter(y = macd_values[0][1], x = inst_data1['time'], line=dict(color='orange', width=1))

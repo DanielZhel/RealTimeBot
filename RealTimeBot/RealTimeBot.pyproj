@@ -22,26 +22,27 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ADA.py" />
+    <Compile Include="Inst\ADA.py" />
     <Compile Include="Data.py" />
-    <Compile Include="DOT.py" />
-    <Compile Include="FIL.py" />
+    <Compile Include="Inst\DOT.py" />
+    <Compile Include="Inst\FIL.py" />
     <Compile Include="Indicators.py" />
-    <Compile Include="MATIC.py" />
+    <Compile Include="Inst\MATIC.py" />
     <Compile Include="OKXAPI\client.py" />
     <Compile Include="OKXAPI\consts.py" />
     <Compile Include="OKXAPI\MarketData.py" />
-    <Compile Include="UNI.py" />
+    <Compile Include="Inst\UNI.py" />
     <Compile Include="ReduceRepeat.py" />
     <Compile Include="OKXAPI\utils.py" />
     <Compile Include="PositionImit.py" />
-    <Compile Include="SOL.py" />
+    <Compile Include="Inst\SOL.py" />
     <Compile Include="start.py" />
     <Compile Include="TradingLogic.py" />
     <Compile Include="SendMessage.py" />
-    <Compile Include="XRP.py" />
+    <Compile Include="Inst\XRP.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Inst\" />
     <Folder Include="OKXAPI\" />
     <Folder Include="OKXAPI\__pycache__\" />
   </ItemGroup>

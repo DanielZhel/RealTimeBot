@@ -7,13 +7,9 @@ import httpx
 
 
 SCRIPTS = [
-    'SOL.py',
-    'ADA.py',
-    'XRP.py',
-    'FIL.py',
-    'MATIC.py',
-    'DOT.py',
-    'UNI.py'
+    'RealTimeBot\Inst\SOL.py',
+    'RealTimeBot\Inst\ADA.py',
+    'RealTimeBot\Inst\XRP.py'
 ]
 
 async def waiter(sc, p):
